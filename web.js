@@ -2,9 +2,14 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buffer = new Buffer("Texto del buffer!", "utf-8"); 
+var buffer = new Buffer("Texto del buffer!", "utf-8");
 
-buffer = require("fs").readFile('index.html', function (err, data) { if (err) throw err; console.log(data);  console.log("leido con exito"); }); 
+fs = require('fs');
+
+fs.readFile('index.html', function (err, data) { 
+if (err){return console.log(err);}
+buffer=data;
+console.log(data + "leido con exito"); });
 
 app.get('/', function(request, response) {
   response.send(buffer.toString('utf-8'));
