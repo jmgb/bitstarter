@@ -2,15 +2,15 @@ var express = require('express');
 
 var app = express.createServer(express.logger());
 
-var buffer = new Buffer("I'm a string!", "utf-8"); 
+var buffer = new Buffer("Texto del buffer!", "utf-8"); 
 
-buffer = fs.readFile('/index.html', function (err, data) { if (err) throw err; console.log(data);  console.log("leido con exito"); }); 
+//buffer = fs.readFile('/index.html', function (err, data) { if (err) throw err; console.log(data);  console.log("leido con exito"); }); 
 
 //console.log(buffer.toString('utf-8');
 
 
 app.get('/', function(request, response) {
-  response.send("hola");
+  response.send(buffer.toString('utf-8'));
 });
 
 
