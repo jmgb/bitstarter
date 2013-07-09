@@ -7,9 +7,7 @@ app.get('/', function(request, response) {
 });
 
 
-var bufferFromFile = new buffer(); 
-
-bufferFromFile = fs.readFile('/index.html', function (err, data) {
+var bufferFromFile = fs.readFile('index.html', function (err, data) {
   if (err) throw err;
   console.log(data);
 });
