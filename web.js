@@ -14,7 +14,7 @@ var bufferFromFile = fs.readFile('index.html', function (err, data) {
 
 
 app.get('/', function(request, response) {
-  response.send(bufferFromFile.toString('utf-8');
+  response.send(bufferFromFile.toString('utf-8'));
 });
 
 
