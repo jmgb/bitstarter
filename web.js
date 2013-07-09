@@ -7,11 +7,11 @@ app.get('/', function(request, response) {
 });
 
 
-var buffer = new Buffer("I'm a string!", "utf-8"); 
+//var buffer = new Buffer("I'm a string!", "utf-8"); 
 
-buffer = fs.readFile('index.html', function (err, data) { if (err) throw err; console.log(data);  console.log("leido con exito"); }); 
+//buffer = fs.readFile('index.html', function (err, data) { if (err) throw err; console.log(data);  console.log("leido con exito"); }); 
 
-console.log(buffer.toString('utf-8');
+//console.log(buffer.toString('utf-8');
 
 
 app.get('/', function(request, response) {
